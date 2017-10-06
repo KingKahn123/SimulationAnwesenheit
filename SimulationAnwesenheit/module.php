@@ -217,6 +217,7 @@ class SimulationAnwesenheit extends IPSModule
 		}
 		if(isset($NextSimulationData['nextSwitchTimestamp'])) {
 			$this->SetTimerInterval("UpdateTargetsTimer", ($NextSimulationData['nextSwitchTimestamp'] - time() + 1) * 1000);
+			$this->SetValue("NextTrigger", ($NextSimulationData['nextSwitchTimestamp'] - time() + 1) * 1000);
 		} else {
 			$this->SetTimerInterval("UpdateTargetsTimer", 0);
 		}
