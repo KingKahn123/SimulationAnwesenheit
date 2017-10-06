@@ -1,5 +1,5 @@
 <?
-class AnwesenheitsSimulation extends IPSModule
+class SimulationAnwesenheit extends IPSModule
 {
 	public function Create() {
 		//Never delete this line!
