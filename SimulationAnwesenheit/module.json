@@ -1,11 +1,11 @@
 {
-    "id": "{87F47896-DD54-442D-94FD-9990BD8D9F54}",
-    "name": "AnwesenheitsSimulation",
+    "id": "{8c5a384a-e62b-4fb8-9fa1-9681d485c174}",
+    "name": "SimulationAnwesenheit",
     "type": 3,
     "vendor": "",
     "aliases": 
     [
-        "AnwesenheitsSimulation"
+        "SimulationAnwesenheit"
     ],
     "parentRequirements": [],
     "childRequirements": [],
