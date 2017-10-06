@@ -15,6 +15,7 @@ class SimulationAnwesenheit extends IPSModule
 		IPS_SetHidden($this->GetIDForIdent("SimulationData"), true);
 		$this->RegisterVariableString("SimulationView", "Simulationsvorschau", "~HTMLBox");
 		$this->RegisterVariableString("SimulationDay", "Simulationsquelle (Tag)", "");
+		$this->RegisterVariableString("NextTrigger", "Nächster Trigger", "");
 		$this->RegisterVariableBoolean("Active", "Simulation aktiv", "~Switch");
 		$this->EnableAction("Active");
 		$this->CreateCategoryByIdent($this->InstanceID, "Targets", "Targets (Simulation)");
