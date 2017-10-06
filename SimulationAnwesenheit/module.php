@@ -41,6 +41,7 @@ class SimulationAnwesenheit extends IPSModule
 			SetValue($this->GetIDForIdent("SimulationDay"), "Simulation deaktiviert");
 			SetValue($this->GetIDForIdent("SimulationData"), "");
 			$this->SetTimerInterval("UpdateTargetsTimer", 0);
+			SetValue($this->GetIDForIdent("NextTrigger"), "None");
 			IPS_SetEventActive($this->GetIDForIdent("UpdateDataTimer"), false);
 			SetValue($this->GetIDForIdent("SimulationView"), "Simulation deaktiviert");
 			IPS_SetHidden($this->GetIDForIdent("SimulationView"), true);
