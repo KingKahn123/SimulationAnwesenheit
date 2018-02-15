@@ -57,6 +57,7 @@ if (!defined('VM_UPDATE')) {
 				return;
 			}
 			
+			SetValue($this->GetIDForIdent("Trigger"), $SourceID);
 			switch($this->GetProfileName(IPS_GetVariable($SourceID))) {
 				case "~Window.Hoppe":
 					if($SourceValue == 0 || $SourceValue == 2) {
