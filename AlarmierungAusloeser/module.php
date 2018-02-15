@@ -263,7 +263,7 @@ if (!defined('VM_UPDATE')) {
 					}				
 						
 					$formdata->elements[1]->values[] = Array(
-						"Name" => IPS_GetName($sensor->ID),
+						"Name" => IPS_GetName(IPS_GetParent($sensor->ID)),
 						"Status" => $status,
 					);
 					
