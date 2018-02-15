@@ -20,6 +20,8 @@
 			$this->EnableAction("Active");
 			$this->CreateVariableByIdent($this->InstanceID, "Alert", "Alert", 0, "~Alert");
 			$this->EnableAction("Alert");
+			$this->CreateVariableByIdent($this->InstanceID, "Trigger", "Trigger", 3, "~String");
+			$this->EnableAction("Trigger");
 			
 		}
 
