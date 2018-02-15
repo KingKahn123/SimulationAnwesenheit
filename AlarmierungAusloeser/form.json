@@ -1,7 +1,0 @@
-{
-	"elements":
-	[
-		{ "type": "Label", "label": "Press Update after adding/removing any sensor links" },
-		{ "type": "Button", "label": "Update", "onClick": "ARM_UpdateEvents($id);" }
-	]
-}
