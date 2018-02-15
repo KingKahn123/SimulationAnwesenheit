@@ -1,6 +1,6 @@
 <?
 
-	class Alarmierung extends IPSModule {
+	class AlarmierungAusloeser extends IPSModule {
 		
 		public function Create()
 		{
