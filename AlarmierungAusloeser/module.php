@@ -25,7 +25,7 @@ if (!defined('VM_UPDATE')) {
 			$this->EnableAction("Active");
 			$this->RegisterVariableBoolean("Alert", $this->Translate("Alert"), "~Alert", 0);
 			$this->EnableAction("Alert");
-			$this->RegisterVariableString("Trigger", $this->Translate("Trigger"), "~String", 0);
+			$this->RegisterVariableInteger("Trigger", $this->Translate("Trigger"), "", 0);
 			$this->EnableAction("Trigger");
 
 			$sensors = json_decode($this->ReadPropertyString("Sensors"));
@@ -57,7 +57,7 @@ if (!defined('VM_UPDATE')) {
 				return;
 			}
 			
-			SetValue($this->GetIDForIdent("Trigger"), $SourceID);
+			SetValue($this->GetIDForIdent("Trigger"), IPS_GetParent($SourceID));
 			switch($this->GetProfileName(IPS_GetVariable($SourceID))) {
 				case "~Window.Hoppe":
 					if($SourceValue == 0 || $SourceValue == 2) {
