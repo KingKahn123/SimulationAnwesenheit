@@ -6,7 +6,7 @@ if (!defined('VM_UPDATE')) {
 	define("VM_UPDATE", IPS_BASE + 603);
 }
 
-	class Alarmierung extends IPSModule {
+	class AlarmierungAusloeser extends IPSModule {
 		
 		public function Create()
 		{
@@ -25,6 +25,8 @@ if (!defined('VM_UPDATE')) {
 			$this->EnableAction("Active");
 			$this->RegisterVariableBoolean("Alert", $this->Translate("Alert"), "~Alert", 0);
 			$this->EnableAction("Alert");
+			$this->RegisterVariableString("Trigger", $this->Translate("Trigger"), "~String", 0);
+			$this->EnableAction("Trigger");
 
 			$sensors = json_decode($this->ReadPropertyString("Sensors"));
 			foreach ($sensors as $sensor) {
