@@ -76,7 +76,6 @@ class SimulationAnwesenheit extends IPSModule
 		$dayStart = mktime(0, 0, 0, date("m"), date("d"), date("Y"));
 		$dayDiff = $day * 24 * 3600;
 		$dayData = array();
-		$values = array();
 		//Going through all linked variables
 		foreach($targetIDs as $targetID) {
 			//resolve link to linked targetID
@@ -95,9 +94,7 @@ class SimulationAnwesenheit extends IPSModule
 			}
 		}
 		// return all values for linked variables for one day in a array
-		if (sizeof($values) > 0){
-			return array("Date" => date("d.m.Y", $dayStart - $dayDiff), "Data" => $dayData);
-		}
+		return array("Date" => date("d.m.Y", $dayStart - $dayDiff), "Data" => $dayData);
 	}
 	//returns a array of all linked variables for 1 day and checks if this meets the needed switchcount
 	private function GetDataArray($days, $targetIDs) {
